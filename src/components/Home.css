@@ -1,0 +1,11 @@
+.sumContainer {
+  display: grid;
+  grid-template: 1fr/ 1fr 1fr;
+}
+.recent {
+  grid-column: 1/2;
+}
+.top {
+  grid-column: 2/3;
+  color: blue;
+}

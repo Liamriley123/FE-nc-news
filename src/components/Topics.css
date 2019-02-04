@@ -1,0 +1,33 @@
+.topicContainer {
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.topicContainer > li {
+  border: 1px solid rgb(255, 255, 255);
+  width: 50%;
+  padding: 4rem;
+  margin: 3rem auto;
+  border-width: 10px;
+  border-radius: 20px;
+  border-style: double;
+  background-color: #ff2d2d;
+  color: white;
+  list-style: none;
+}
+
+.slug {
+  font-size: 3.7rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.desc {
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+}
+
+#linkToArticles {
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+  color: white;
+}

@@ -1,10 +1,46 @@
 import React, { Component } from "react";
+import { getArticles, formatDate } from "./api";
+import "./Articles.css";
 
 class Articles extends Component {
+  state = {
+    articles: []
+  };
+
+  async componentDidMount() {
+    const data = await getArticles();
+    this.setState({ articles: data });
+  }
+
   render() {
+    let { articles } = this.state;
     return (
       <div>
-        <h1>Articles...</h1>
+        <h2 className="articleHeading">Articles</h2>
+        <div className="articleList">
+          {articles.map(
+            ({
+              article_id,
+              title,
+              topic,
+              author,
+              created_at,
+              comment_count,
+              votes
+            }) => {
+              return (
+                <li key={article_id}>
+                  <p className="articleP">Author: {author}</p>
+                  <h3 className="articleTitle">{title}</h3>
+                  <p className="articlePTopic">Topic: {topic}</p>
+                  <p className="articlePDate">Date: {formatDate(created_at)}</p>
+                  <p className="comments">{comment_count} comments</p>
+                  <p className="votes">Votes: {votes}</p>
+                </li>
+              );
+            }
+          )}
+        </div>
       </div>
     );
   }

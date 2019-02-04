@@ -1,9 +1,10 @@
 .App {
   text-align: center;
+  background-color: rgb(198, 198, 198);
 }
 
 .title {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 100;
   text-transform: uppercase;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
