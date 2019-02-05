@@ -4,8 +4,88 @@
 }
 .recent {
   grid-column: 1/2;
+  width: 100%;
+  margin: 2rem auto;
 }
+
+.recent > section {
+  border: 1px solid rgb(255, 255, 255);
+  width: 50%;
+  padding: 4rem;
+  margin: 3rem auto;
+  border-width: 10px;
+  border-radius: 20px;
+  border-style: double;
+  background-color: #ff2d2d;
+  color: white;
+  list-style: none;
+}
+
+.top > section {
+  border: 1px solid rgb(255, 255, 255);
+  width: 50%;
+  padding: 4rem;
+  margin: 3rem auto;
+  border-width: 10px;
+  border-radius: 20px;
+  border-style: double;
+  background-color: #ff2d2d;
+  color: white;
+  list-style: none;
+}
+
 .top {
   grid-column: 2/3;
-  color: blue;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.homeTitle {
+  font-weight: 300;
+  font-size: 3rem;
+  color: #ff2d2d;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(182, 182, 182, 0.432);
+  padding: 3rem;
+  margin: 0;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  letter-spacing: 3px;
+  text-decoration: underline overline;
+  text-decoration-color: white;
+}
+
+.homeSlug {
+  font-weight: 300;
+  font-size: 1.8rem;
+  color: #ff2d2d;
+  border-bottom: 1px solid rgba(182, 182, 182, 0.432);
+  padding: 3rem;
+  margin: 0;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  letter-spacing: 0.5px;
+}
+label {
+  font-weight: 300;
+  font-size: 2.5rem;
+  color: #ff2d2d;
+  border-bottom: 1px solid rgba(182, 182, 182, 0.432);
+  padding: 3rem;
+  margin: 0;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  letter-spacing: 0.5px;
+  text-decoration: underline;
+}
+
+.articleSumP {
+  font-size: 1.5rem;
+  font-family: "Raleway", sans-serif;
+}
+.articleSumTitle {
+  font-size: 2rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.sumVotes {
+  font-size: 1.5rem;
+  font-family: "Raleway", sans-serif;
 }

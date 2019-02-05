@@ -10,6 +10,8 @@
   margin: 0;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   letter-spacing: 3px;
+  text-decoration: underline overline;
+  text-decoration-color: white;
 }
 
 .articleList {

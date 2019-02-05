@@ -6,6 +6,7 @@ import { Router } from "@reach/router";
 import Home from "./components/Home";
 import Articles from "./components/Articles";
 import Topics from "./components/Topics";
+import ArticlesByTopic from "./components/ArticlesByTopic";
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
           <Home path="/" />
           <Articles path="/articles" />
           <Topics path="/topics" />
+          <ArticlesByTopic path="/topics/:topic" />
         </Router>
       </div>
     );

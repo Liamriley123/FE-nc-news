@@ -7,6 +7,11 @@ export const getArticles = async () => {
   return data.articles;
 };
 
+export const getArticlesByTopic = async topic => {
+  const { data } = await axios.get(`${BASE_URL}/topics/${topic}/articles`);
+  return data.articles;
+};
+
 export const getTopArticles = async () => {
   const { data } = await axios.get(
     `${BASE_URL}/articles?sort-by=votes&&order_by=asc`
