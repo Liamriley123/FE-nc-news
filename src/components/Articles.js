@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { getArticles, formatDate } from "./api";
+import { Link } from "@reach/router";
 import "./Articles.css";
 
 class Articles extends Component {
@@ -36,6 +37,12 @@ class Articles extends Component {
                   <p className="articlePDate">Date: {formatDate(created_at)}</p>
                   <p className="comments">{comment_count} comments</p>
                   <p className="votes">Votes: {votes}</p>
+                  <Link
+                    className="buttonViewArticle"
+                    to={`/articles/${article_id}`}
+                  >
+                    <p>View Article</p>
+                  </Link>
                 </li>
               );
             }

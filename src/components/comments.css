@@ -1,0 +1,20 @@
+.commentDate {
+  font-size: 1.2rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.commentBody {
+  font-size: 1.2rem;
+  font-family: "Raleway", sans-serif;
+  border-width: 2.5px;
+  padding: 2rem;
+  border-radius: 10px;
+  border-style: solid;
+  background-color: #ff2d2d;
+  color: rgb(255, 255, 255);
+}
+
+.commentAuthor {
+  font-size: 1.8rem;
+  font-family: "Raleway", sans-serif;
+}

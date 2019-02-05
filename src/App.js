@@ -7,6 +7,8 @@ import Home from "./components/Home";
 import Articles from "./components/Articles";
 import Topics from "./components/Topics";
 import ArticlesByTopic from "./components/ArticlesByTopic";
+import Article from "./components/Article";
+import Comments from "./components/comments";
 
 class App extends Component {
   render() {
@@ -19,6 +21,8 @@ class App extends Component {
           <Articles path="/articles" />
           <Topics path="/topics" />
           <ArticlesByTopic path="/topics/:topic" />
+          <Article path="/articles/:article_id" />
+          <Comments path="/articles/:article_id/comments" />
         </Router>
       </div>
     );

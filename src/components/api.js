@@ -7,6 +7,11 @@ export const getArticles = async () => {
   return data.articles;
 };
 
+export const getComments = async id => {
+  const { data } = await axios.get(`${BASE_URL}/articles/${id}/comments`);
+  return data.comments;
+};
+
 export const getArticleById = async id => {
   const { data } = await axios.get(`${BASE_URL}/articles/${id}`);
   return data.article;
@@ -25,6 +30,7 @@ export const getTopArticles = async () => {
 };
 
 export const formatDate = date => {
+  console.log(date);
   const dateArr = date.slice(0, 10).split("-");
   return `${dateArr[2]}/${dateArr[1]}/${dateArr[0]}`;
 };

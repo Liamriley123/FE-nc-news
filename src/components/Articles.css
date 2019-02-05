@@ -40,6 +40,33 @@
   margin: auto;
 }
 
+.oneArticleTitle {
+  font-size: 170%;
+  font-weight: 300;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  padding: 1rem 1.4rem;
+  margin: auto;
+}
+
+.body {
+  font-size: 1.2rem;
+  font-family: "Raleway", sans-serif;
+  border-width: 2.5px;
+  padding: 2rem;
+  border-radius: 10px;
+  border-style: solid;
+  background-color: #ff2d2d;
+  color: white;
+}
+
+.oneArticleTitle {
+  font-size: 170%;
+  font-weight: 300;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  padding: 1rem 1.4rem;
+  margin: auto;
+}
+
 .articlePTopic {
   font-size: 1.8rem;
   font-family: "Raleway", sans-serif;
@@ -63,4 +90,82 @@
 .votes {
   font-size: 1.3rem;
   font-family: "Raleway", sans-serif;
+}
+
+.buttonViewArticle {
+  display: inline-block;
+  padding: 0.11em 1.6em;
+  border: 0.1em solid #000000;
+  margin: 0 0.2em 0.2em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #000000;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  background-color: #ff2d2d;
+  text-align: center;
+  transition: all 0.15s;
+}
+
+.buttonViewArticle:hover {
+  text-shadow: 0 0 2em rgba(255, 255, 255, 1);
+  color: #ffffff;
+  border-color: #ffffff;
+  background-color: #d32626;
+}
+
+.buttonGrid {
+  display: grid;
+  grid-template: 1fr/ 1fr 1fr;
+}
+
+.buttonBack {
+  grid-column: 1/2;
+  display: inline-block;
+  padding: 0.11em 1.6em;
+  border: 0.1em solid #000000;
+  margin: 1em 1em 1em 3em;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #000000;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  background-color: #ff2d2d;
+  text-align: center;
+  transition: all 0.15s;
+}
+.buttonViewComments {
+  grid-column: 2/3;
+  display: inline-block;
+  padding: 0.11em 0.6em;
+  border: 0.1em solid #000000;
+  margin: 1em 1em 1em 3em;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #000000;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  background-color: #ff2d2d;
+  text-align: center;
+  transition: all 0.15s;
+}
+
+.buttonViewComments:hover {
+  text-shadow: 0 0 2em rgba(255, 255, 255, 1);
+  color: #ffffff;
+  border-color: #ffffff;
+  background-color: #d32626;
+}
+
+.buttonBack:hover {
+  text-shadow: 0 0 2em rgba(255, 255, 255, 1);
+  color: #ffffff;
+  border-color: #ffffff;
+  background-color: #d32626;
 }

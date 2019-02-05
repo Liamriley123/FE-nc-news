@@ -1,4 +1,5 @@
-import React, { Component, Link } from "react";
+import React, { Component } from "react";
+import { Link } from "@reach/router";
 import { getArticlesByTopic, formatDate } from "./api";
 
 class ArticlesByTopic extends Component {
@@ -35,14 +36,12 @@ class ArticlesByTopic extends Component {
                   <p className="articlePDate">Date: {formatDate(created_at)}</p>
                   <p className="comments">{comment_count} comments</p>
                   <p className="votes">Votes: {votes}</p>
-                  <button>
-                    <Link
-                      className="buttonViewArticle"
-                      to={`/articles/${article_id}`}
-                    >
-                      View Article
-                    </Link>
-                  </button>
+                  <Link
+                    className="buttonViewArticle"
+                    to={`/articles/${article_id}`}
+                  >
+                    <p>View Article</p>
+                  </Link>
                 </li>
               );
             }
