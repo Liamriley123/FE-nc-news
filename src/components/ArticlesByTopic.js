@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Link } from "react";
 import { getArticlesByTopic, formatDate } from "./api";
 
 class ArticlesByTopic extends Component {
@@ -15,8 +15,8 @@ class ArticlesByTopic extends Component {
     let { articles } = this.state;
     return (
       <div>
-        <h2 className="articleByTopicHeading">Articles</h2>
-        <div className="articleByTopicList">
+        <h2 className="articleHeading">Articles</h2>
+        <div className="articleList">
           {articles.map(
             ({
               article_id,
@@ -35,6 +35,14 @@ class ArticlesByTopic extends Component {
                   <p className="articlePDate">Date: {formatDate(created_at)}</p>
                   <p className="comments">{comment_count} comments</p>
                   <p className="votes">Votes: {votes}</p>
+                  <button>
+                    <Link
+                      className="buttonViewArticle"
+                      to={`/articles/${article_id}`}
+                    >
+                      View Article
+                    </Link>
+                  </button>
                 </li>
               );
             }

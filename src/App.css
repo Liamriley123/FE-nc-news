@@ -4,12 +4,14 @@
 }
 
 .title {
-  font-size: 5rem;
-  font-weight: 100;
+  font-size: 6rem;
+  font-weight: 50;
   text-transform: uppercase;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   background-color: #ff2d2d;
-  color: #f2f2f2;
+  -webkit-text-fill-color: rgb(199, 28, 28);
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 2px;
 }
 
 h1 {

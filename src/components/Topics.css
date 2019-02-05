@@ -45,3 +45,9 @@
   font-family: "Raleway", sans-serif;
   color: white;
 }
+
+#linkToArticles:hover {
+  font-size: 2.5rem;
+  transition: 1s;
+  text-decoration: underline overline;
+}

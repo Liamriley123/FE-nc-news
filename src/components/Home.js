@@ -28,12 +28,12 @@ class Home extends Component {
         <div className="sumContainer">
           <ArticleSum
             articles={this.state.recentArticles}
-            label="RECENT"
+            label="RECENT ARTICLES"
             name="recent"
           />
           <ArticleSum
             articles={this.state.topArticles}
-            label="TOP"
+            label="TOP ARTICLES"
             name="top"
           />
         </div>

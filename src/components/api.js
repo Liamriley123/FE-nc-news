@@ -7,6 +7,11 @@ export const getArticles = async () => {
   return data.articles;
 };
 
+export const getArticleById = async id => {
+  const { data } = await axios.get(`${BASE_URL}/articles/${id}`);
+  return data.article;
+};
+
 export const getArticlesByTopic = async topic => {
   const { data } = await axios.get(`${BASE_URL}/topics/${topic}/articles`);
   return data.articles;
