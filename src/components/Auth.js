@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { getUserByUsername } from "./api";
+import "./Auth.css";
 
 class Auth extends Component {
   state = {
@@ -15,7 +16,8 @@ class Auth extends Component {
     } else {
       return (
         <div>
-          <h3>Please log in!</h3>;
+          <h3 className="login">Please log in!</h3>
+          <h3 className="login">go over to users to find a valid username</h3>
           <form onSubmit={this.handleSubmit}>
             <input
               value={userText}
@@ -23,8 +25,8 @@ class Auth extends Component {
               onChange={this.handleChange}
             />
           </form>
-          {this.state.userLoading && <p>loading...</p>}
-          {this.state.userErr && <h4>no user found with this username</h4>}
+          {this.state.userLoading && <p className="login">loading...</p>}
+          {this.state.userErr && <h4 className="invalid">INVALID USERNAME</h4>}
         </div>
       );
     }
@@ -42,7 +44,8 @@ class Auth extends Component {
       })
       .catch(err => {
         this.setState({
-          userErr: err
+          userErr: err,
+          userLoading: false
         });
       });
     this.setState({

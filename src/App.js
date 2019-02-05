@@ -10,6 +10,7 @@ import ArticlesByTopic from "./components/ArticlesByTopic";
 import Article from "./components/Article";
 import Comments from "./components/comments";
 import Auth from "./components/Auth";
+import Users from "./components/Users";
 
 class App extends Component {
   state = {
@@ -24,7 +25,6 @@ class App extends Component {
         <Nav />
         <Auth user={user} setUser={this.setUser}>
           <Router>
-            <Home path="/" />
             <Articles path="/articles" />
             <Topics path="/topics" />
             <ArticlesByTopic path="/topics/:topic" />
@@ -32,6 +32,10 @@ class App extends Component {
             <Comments path="/articles/:article_id/comments" />
           </Router>
         </Auth>
+        <Router>
+          <Home path="/" user={user} />
+          <Users path="/users" />
+        </Router>
       </div>
     );
   }

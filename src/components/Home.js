@@ -18,12 +18,14 @@ class Home extends Component {
   }
 
   render() {
-    console.log(this.state.topArticles);
+    const { user } = this.props;
     return (
       <div>
         <h2 className="homeTitle">Welcome to NC-News</h2>
         <h3 className="homeSlug">
-          Log in to use all of the websites features...
+          {user
+            ? `Welcome Back ${user.name}`
+            : "Log in to use all of the websites features..."}
         </h3>
         <div className="sumContainer">
           <ArticleSum
