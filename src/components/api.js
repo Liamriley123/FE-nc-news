@@ -7,6 +7,10 @@ export const getArticles = async () => {
   return data.articles;
 };
 
+export const getUserByUsername = username => {
+  return axios.get(`${BASE_URL}/users/${username}`).then(({ data }) => data);
+};
+
 export const getComments = async id => {
   const { data } = await axios.get(`${BASE_URL}/articles/${id}/comments`);
   return data.comments;
