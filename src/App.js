@@ -22,7 +22,7 @@ class App extends Component {
     return (
       <div className="App">
         <Heading className="Heading" />
-        <Nav />
+        <Nav user={user} logOut={this.logOut} />
         <Auth user={user} setUser={this.setUser}>
           <Router>
             <Articles path="/articles" />
@@ -42,6 +42,11 @@ class App extends Component {
   setUser = user => {
     this.setState({
       user
+    });
+  };
+  logOut = () => {
+    this.setState({
+      user: null
     });
   };
 }

@@ -3,7 +3,7 @@
 .articleHeading {
   font-weight: 300;
   font-size: 3rem;
-  color: #ff2d2d;
+  color: #cd2b2b;
   text-transform: uppercase;
   border-bottom: 1px solid rgba(182, 182, 182, 0.432);
   padding: 3rem;
@@ -27,7 +27,7 @@
   border-width: 10px;
   border-radius: 20px;
   border-style: double;
-  background-color: #ff2d2d;
+  background-color: #cd2b2b;
   color: white;
   list-style: none;
 }
@@ -55,7 +55,7 @@
   padding: 2rem;
   border-radius: 10px;
   border-style: solid;
-  background-color: #ff2d2d;
+  background-color: #cd2b2b;
   color: white;
 }
 
@@ -104,7 +104,7 @@
   font-weight: 300;
   color: #000000;
   text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
-  background-color: #ff2d2d;
+  background-color: #cd2b2b;
   text-align: center;
   transition: all 0.15s;
 }
@@ -113,12 +113,62 @@
   text-shadow: 0 0 2em rgba(255, 255, 255, 1);
   color: #ffffff;
   border-color: #ffffff;
-  background-color: #d32626;
+  background-color: #8a1c1c;
 }
 
 .buttonGrid {
   display: grid;
   grid-template: 1fr/ 1fr 1fr;
+}
+
+.voteGrid {
+  display: grid;
+  grid-template: 1fr/ 1fr 1fr;
+}
+
+.voteUp {
+  grid-column: 1/2;
+  text-align: center;
+  align-items: center;
+  color: #000000 !important;
+  text-transform: uppercase;
+  background: #cd2b2b;
+  padding: 5px;
+  border: 2px solid #000000 !important;
+  border-radius: 6px;
+  display: inline-block;
+  width: 10em;
+}
+
+.voteUp:hover {
+  color: #ffffff !important;
+  border-radius: 50px;
+  border-color: #000000 !important;
+  background-color: green;
+  transition: all 0.3s ease 0s;
+  font-size: 11px;
+}
+
+.voteDown {
+  grid-column: 2/3;
+  text-align: center;
+  color: #000000 !important;
+  text-transform: uppercase;
+  background: #cd2b2b;
+  padding: 5px;
+  border: 2px solid #000000 !important;
+  border-radius: 6px;
+  display: inline-block;
+  width: 10em;
+}
+
+.voteDown:hover {
+  color: #ffffff !important;
+  border-radius: 50px;
+  border-color: #000000 !important;
+  background-color: rgb(128, 0, 0);
+  transition: all 0.3s ease 0s;
+  font-size: 11px;
 }
 
 .buttonBack {
@@ -134,7 +184,7 @@
   font-weight: 300;
   color: #000000;
   text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
-  background-color: #ff2d2d;
+  background-color: #cd2b2b;
   text-align: center;
   transition: all 0.15s;
 }
@@ -151,7 +201,7 @@
   font-weight: 300;
   color: #000000;
   text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
-  background-color: #ff2d2d;
+  background-color: #cd2b2b;
   text-align: center;
   transition: all 0.15s;
 }
@@ -160,12 +210,12 @@
   text-shadow: 0 0 2em rgba(255, 255, 255, 1);
   color: #ffffff;
   border-color: #ffffff;
-  background-color: #d32626;
+  background-color: #8a1c1c;
 }
 
 .buttonBack:hover {
   text-shadow: 0 0 2em rgba(255, 255, 255, 1);
   color: #ffffff;
   border-color: #ffffff;
-  background-color: #d32626;
+  background-color: #8a1c1c;
 }

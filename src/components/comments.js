@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "@reach/router";
 import { getComments, formatDate } from "./api";
 import "./comments.css";
+import Voter from "./Voter";
 
 class Comments extends Component {
   state = {
@@ -25,7 +26,12 @@ class Comments extends Component {
                 <p className="commentDate">Date: {formatDate(created_at)}</p>
                 <p className="commentAuthor">Author: {author}</p>
                 <p className="commentBody"> {body}</p>
-                <p className="votes">Votes: {votes}</p>
+                <Voter
+                  votes={votes}
+                  comment_id={comment_id}
+                  article_id={this.props.article_id}
+                  parent="comments"
+                />
                 <Link
                   className="buttonBack"
                   to={`/articles/${this.props.article_id}`}

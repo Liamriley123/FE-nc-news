@@ -33,7 +33,7 @@ export const getArticlesByTopic = async topic => {
 
 export const getTopArticles = async () => {
   const { data } = await axios.get(
-    `${BASE_URL}/articles?sort-by=votes&&order_by=asc`
+    `${BASE_URL}/articles?sort_by=votes&order=desc`
   );
   return data.articles;
 };

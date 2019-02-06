@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { getArticleById, formatDate } from "./api";
 import { Link } from "@reach/router";
+import Voter from "./Voter";
 
 class Article extends Component {
   state = {
@@ -29,7 +30,8 @@ class Article extends Component {
             </p>
             <p className="body">{article.body}</p>
             <p className="comments">{article.comment_count} comments</p>
-            <p className="votes">Votes: {article.votes}</p>
+            <Voter votes={article.votes} article_id={article.article_id} />
+
             <div className="buttonGrid">
               <Link className="buttonBack" to={`/articles`}>
                 <p>Back</p>

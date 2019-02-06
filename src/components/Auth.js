@@ -5,8 +5,8 @@ import "./Auth.css";
 class Auth extends Component {
   state = {
     userText: "",
-    userErr: null,
-    userLoading: false
+    userErr: null
+    //userLoading: false
   };
   render() {
     const { user, children } = this.props;
@@ -25,7 +25,7 @@ class Auth extends Component {
               onChange={this.handleChange}
             />
           </form>
-          {this.state.userLoading && <p className="login">loading...</p>}
+          {/* {this.state.userLoading && <p className="login">loading...</p>} */}
           {this.state.userErr && <h4 className="invalid">INVALID USERNAME</h4>}
         </div>
       );
@@ -44,8 +44,8 @@ class Auth extends Component {
       })
       .catch(err => {
         this.setState({
-          userErr: err,
-          userLoading: false
+          userErr: err
+          // userLoading: false
         });
       });
     this.setState({

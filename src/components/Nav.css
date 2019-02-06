@@ -1,7 +1,7 @@
 .nav {
   display: flex;
   justify-content: space-evenly;
-  background-color: #ff2d2d;
+  background-color: #cd2b2b;
   border-bottom: 2px solid white;
   width: 100%;
 }
@@ -12,9 +12,27 @@
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   padding: 2rem;
   transition: 0.5s;
+  margin: 10px;
 }
 
 .nav > a:hover {
   transform: scale(1.2);
   text-decoration: underline overline;
+  margin: 10px;
+}
+
+.nav > p {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  padding: 2rem;
+  transition: 0.5s;
+  margin: 10px;
+}
+
+.nav > p:hover {
+  transform: scale(1.2);
+  text-decoration: underline overline;
+  margin: 10px;
 }
