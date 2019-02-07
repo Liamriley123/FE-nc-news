@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Exo");
+
 .App {
   text-align: center;
   background-color: rgb(198, 198, 198);
 }
 
 .title {
-  font-size: 4.8rem;
+  font-size: 5.4rem;
   font-weight: 50;
   text-transform: uppercase;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -12,24 +14,41 @@
   -webkit-text-fill-color: rgb(199, 28, 28);
   -webkit-text-stroke-color: white;
   -webkit-text-stroke-width: 2px;
+  text-decoration: underline overline;
+  text-decoration-style: double;
+  text-decoration-color: white;
+  padding: 1rem 0 0 0;
 }
 
 .logged {
-  font-size: 1.3rem;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  text-align: right;
+  font-size: 1.2rem;
+  font-family: "Exo", sans-serif;
   background-color: #cd2b2b;
   width: 100%;
   color: white;
   margin-bottom: 0%;
 }
 
+.userImg {
+  width: 50px;
+}
+
 /* .headerWrapper {
   display: grid;
 } */
 
+h4 {
+  margin: 0;
+}
+
+a {
+  margin: 0;
+}
+
 h1 {
   margin: 0;
-  padding: 0 0 1rem 0;
+  padding: 1rems 0 0 0;
   font-weight: 300;
   font-size: 7rem;
   font-weight: 300;

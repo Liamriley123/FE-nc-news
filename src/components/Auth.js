@@ -23,6 +23,7 @@ class Auth extends Component {
               value={userText}
               placeholder="type username here.."
               onChange={this.handleChange}
+              className="validation"
             />
           </form>
           {/* {this.state.userLoading && <p className="login">loading...</p>} */}

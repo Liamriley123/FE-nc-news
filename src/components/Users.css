@@ -11,6 +11,10 @@
   height: auto;
 }
 
+.avatars {
+  width: 65%;
+}
+
 .overlay {
   position: absolute;
   bottom: 0;

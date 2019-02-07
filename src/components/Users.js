@@ -22,7 +22,7 @@ class Users extends Component {
             return (
               <div className="holder">
                 <div className="container">
-                  <img src={avatar_url} alt="user" />
+                  <img src={avatar_url} alt="user" className="avatars" />
                   <div className="overlay">
                     <h3 className="articleTitle">{username}</h3>
                     <p className="articleP">name: {name}</p>

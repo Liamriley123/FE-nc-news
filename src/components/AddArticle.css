@@ -1,0 +1,116 @@
+.postingImg {
+  width: 100px;
+}
+
+.postingAsBox {
+  border: 1px solid rgb(255, 255, 255);
+  width: 40%;
+  padding: 2rem;
+  margin: 2rem auto;
+  border-width: 3px;
+  border-radius: 10px;
+  border-style: solid;
+  background-color: #cd2b2b;
+  color: white;
+  list-style: none;
+}
+
+.addArtHolder {
+  border: 1px solid rgb(255, 255, 255);
+  width: 60%;
+  padding: 4rem;
+  margin: 3rem auto;
+  border-width: 10px;
+  border-radius: 20px;
+  border-style: double;
+  background-color: #cd2b2b;
+  color: white;
+  list-style: none;
+}
+
+#body {
+  margin-bottom: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 0.5rem;
+  height: 10rem;
+  border: solid;
+  border-width: 1.5px;
+  width: 30rem;
+}
+
+#title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  font-weight: 300;
+  border: solid;
+  border-width: 1.5px;
+}
+
+#slug {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  font-weight: 300;
+  border: solid;
+  border-width: 1.5px;
+}
+
+.select {
+  width: 20rem;
+  margin: 0 auto;
+  background-color: white;
+  outline: none;
+  border: solid;
+  border-width: 1.5px;
+}
+.selectLabel {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 0.7rem;
+  color: rgb(255, 255, 255);
+}
+.postingAs {
+  font-size: 120%;
+  font-weight: 300;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  padding: 1rem 1.4rem;
+  margin: auto;
+}
+
+#addArticleButton {
+  display: inline-block;
+  padding: 0.11em 1.6em;
+  border: 0.1em solid #000000;
+  margin: 0 0.2em 0.2em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #000000;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  background-color: #cd2b2b;
+  text-align: center;
+  transition: all 0.15s;
+  font-size: 15px;
+}
+
+#addArticleButton:hover {
+  text-shadow: 0 0 2em rgba(255, 255, 255, 1);
+  color: #ffffff;
+  border-color: #ffffff;
+  background-color: #8a1c1c;
+}

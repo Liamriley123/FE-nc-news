@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ArticleSum from "./ArticleSum";
-import { getArticles, getTopArticles } from "./api";
+import { getRecentArticles, getTopArticles } from "./api";
 import "./Home.css";
 
 class Home extends Component {
@@ -9,12 +9,11 @@ class Home extends Component {
     topArticles: []
   };
   async componentDidMount() {
-    const recent = await getArticles();
+    const recent = await getRecentArticles();
     const recentArticles = recent.slice(0, 3);
     const top = await getTopArticles();
     const topArticles = top.slice(0, 3);
     this.setState({ topArticles, recentArticles });
-    console.log(recentArticles);
   }
 
   render() {

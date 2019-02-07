@@ -3,7 +3,6 @@ import { Link } from "@reach/router";
 import "./Nav.css";
 
 const Nav = ({ user, logOut }) => {
-  console.log(user);
   return (
     <nav className="nav">
       <Link to="/">HOME </Link>

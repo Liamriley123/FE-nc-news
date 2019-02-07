@@ -7,6 +7,24 @@ export const getArticles = async () => {
   return data.articles;
 };
 
+export const getSortedArticles = async (sort, order, limit, page) => {
+  const { data } = await axios.get(
+    `${BASE_URL}/articles?sort_by=${sort}&order=${order}&limit=${limit}&p=${page}`
+  );
+  return data.articles;
+};
+
+export const deleteData = async (articleid, commentid) => {
+  const url = commentid
+    ? `${BASE_URL}/articles/${articleid}/comments/${commentid}`
+    : `${BASE_URL}/articles/${articleid}`;
+
+  console.log(url);
+
+  const { data } = await axios.delete(url);
+  return data;
+};
+
 export const getUserByUsername = username => {
   return axios.get(`${BASE_URL}/users/${username}`).then(({ data }) => data);
 };
@@ -38,8 +56,14 @@ export const getTopArticles = async () => {
   return data.articles;
 };
 
+export const getRecentArticles = async () => {
+  const { data } = await axios.get(
+    `${BASE_URL}/articles?sort_by=created_at&order=desc`
+  );
+  return data.articles;
+};
+
 export const formatDate = date => {
-  console.log(date);
   const dateArr = date.slice(0, 10).split("-");
   return `${dateArr[2]}/${dateArr[1]}/${dateArr[0]}`;
 };

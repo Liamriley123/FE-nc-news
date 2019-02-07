@@ -18,3 +18,27 @@
   font-size: 1.8rem;
   font-family: "Raleway", sans-serif;
 }
+
+.delButton {
+  text-align: center;
+  align-items: center;
+  color: #000000 !important;
+  text-transform: uppercase;
+  background: #cd2b2b;
+  padding: 5px;
+  border: 2px solid #000000 !important;
+  border-radius: 6px;
+  display: inline-block;
+  width: 10em;
+  margin: 1em 1em 1em 1em;
+  font-size: 11px;
+}
+
+.delButton:hover {
+  color: #ffffff !important;
+  border-radius: 50px;
+  border-color: #ffffff !important;
+  background-color: #671313;
+  transition: all 0.3s ease 0s;
+  font-size: 16px;
+}

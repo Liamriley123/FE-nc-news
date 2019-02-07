@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { getArticleById, formatDate } from "./api";
-import { Link } from "@reach/router";
+import { getArticleById, formatDate, deleteData } from "./api";
+import { Link, navigate } from "@reach/router";
 import Voter from "./Voter";
 
 class Article extends Component {
@@ -11,12 +11,11 @@ class Article extends Component {
   async componentDidMount() {
     const data = await getArticleById(this.props.article_id);
     this.setState({ article: data });
-    console.log(data);
   }
 
   render() {
     let { article } = this.state;
-    console.log(article.created_at);
+    let { user } = this.props;
     return (
       <div>
         <h2 className="articleHeading">Articles</h2>
@@ -30,8 +29,13 @@ class Article extends Component {
             </p>
             <p className="body">{article.body}</p>
             <p className="comments">{article.comment_count} comments</p>
-            <Voter votes={article.votes} article_id={article.article_id} />
-
+            {user.username === article.author ? (
+              <button onClick={this.handleDeleteArticle} className="delButton">
+                DELETE
+              </button>
+            ) : (
+              <Voter votes={article.votes} article_id={article.article_id} />
+            )}
             <div className="buttonGrid">
               <Link className="buttonBack" to={`/articles`}>
                 <p>Back</p>
@@ -48,6 +52,12 @@ class Article extends Component {
       </div>
     );
   }
+  handleDeleteArticle = () => {
+    const articleid = this.state.article.article_id;
+    deleteData(articleid).then(() => {
+      navigate("/articles");
+    });
+  };
 }
 
 export default Article;

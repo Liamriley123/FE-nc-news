@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
-import { getComments, formatDate } from "./api";
+import { getComments, formatDate, deleteData } from "./api";
 import "./comments.css";
 import Voter from "./Voter";
+import AddComment from "./AddComment";
 
 class Comments extends Component {
   state = {
-    comments: []
+    comments: [],
+    showAdd: false
   };
 
   async componentDidMount() {
@@ -15,23 +17,46 @@ class Comments extends Component {
   }
 
   render() {
-    let { comments } = this.state;
+    let { comments, showAdd } = this.state;
+    let { user, article_id } = this.props;
     return (
       <div>
         <h2 className="articleHeading">Comments</h2>
+        <button onClick={this.showAdder} className="showAdder">
+          Add Comment...
+        </button>
+        {showAdd && (
+          <AddComment
+            article_id={article_id}
+            getComment={this.getComment}
+            user={user}
+          />
+        )}
         <div className="articleList">
           {comments.map(({ author, created_at, body, votes, comment_id }) => {
             return (
               <li key={comment_id}>
-                <p className="commentDate">Date: {formatDate(created_at)}</p>
+                {created_at && (
+                  <p className="commentDate">Date: {formatDate(created_at)}</p>
+                )}
                 <p className="commentAuthor">Author: {author}</p>
                 <p className="commentBody"> {body}</p>
-                <Voter
-                  votes={votes}
-                  comment_id={comment_id}
-                  article_id={this.props.article_id}
-                  parent="comments"
-                />
+                {user.username === author ? (
+                  <button
+                    onClick={() => this.handleDeleteComment(comment_id)}
+                    className="delButton"
+                  >
+                    DELETE
+                  </button>
+                ) : (
+                  <Voter
+                    votes={votes}
+                    comment_id={comment_id}
+                    article_id={this.props.article_id}
+                    parent="comments"
+                  />
+                )}
+                <br />
                 <Link
                   className="buttonBack"
                   to={`/articles/${this.props.article_id}`}
@@ -45,6 +70,29 @@ class Comments extends Component {
       </div>
     );
   }
+  getComment = comment => {
+    this.setState(prevState => {
+      return { comments: [comment, ...prevState.comments], showAdd: false };
+    });
+  };
+
+  showAdder = () => {
+    this.setState({
+      showAdd: true
+    });
+  };
+
+  handleDeleteComment = commentid => {
+    console.log(this.props.article_id, commentid, "<-ID");
+    const remainingComments = this.state.comments.filter(remainingComment => {
+      return remainingComment.comment_id !== commentid;
+    });
+    console.log(remainingComments);
+    deleteData(this.props.article_id, commentid).then(data => {
+      console.log(data);
+      this.setState({ comments: remainingComments });
+    });
+  };
 }
 
 export default Comments;

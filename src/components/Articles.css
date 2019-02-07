@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway");
 
+a {
+  margin: 0;
+}
+
 .articleHeading {
   font-weight: 300;
   font-size: 3rem;
@@ -138,6 +142,7 @@
   border-radius: 6px;
   display: inline-block;
   width: 10em;
+  margin: 1em 1em 1em 1em;
 }
 
 .voteUp:hover {
@@ -152,6 +157,7 @@
 .voteDown {
   grid-column: 2/3;
   text-align: center;
+  align-items: center;
   color: #000000 !important;
   text-transform: uppercase;
   background: #cd2b2b;
@@ -160,6 +166,7 @@
   border-radius: 6px;
   display: inline-block;
   width: 10em;
+  margin: 1em 1em 1em 1em;
 }
 
 .voteDown:hover {
@@ -176,7 +183,7 @@
   display: inline-block;
   padding: 0.11em 1.6em;
   border: 0.1em solid #000000;
-  margin: 1em 1em 1em 3em;
+  margin: 1em 1em 1em 1em;
   border-radius: 0.12em;
   box-sizing: border-box;
   text-decoration: none;
@@ -193,7 +200,7 @@
   display: inline-block;
   padding: 0.11em 0.6em;
   border: 0.1em solid #000000;
-  margin: 1em 1em 1em 3em;
+  margin: 1em 1em 1em 1em;
   border-radius: 0.12em;
   box-sizing: border-box;
   text-decoration: none;
@@ -214,6 +221,86 @@
 }
 
 .buttonBack:hover {
+  text-shadow: 0 0 2em rgba(255, 255, 255, 1);
+  color: #ffffff;
+  border-color: #ffffff;
+  background-color: #8a1c1c;
+}
+
+.showAdder {
+  grid-column: 2/3;
+  display: inline-block;
+  padding: 1em 2em;
+  border: 0.1em solid #000000;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #000000;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  background-color: #cd2b2b;
+  text-align: center;
+  transition: all 0.15s;
+  font-size: 15px;
+}
+
+.showAdder:hover {
+  font-size: 20px;
+  text-shadow: 0 0 2em rgba(255, 255, 255, 1);
+  color: #ffffff;
+  border-color: #ffffff;
+  background-color: #8a1c1c;
+}
+
+.sorter {
+  width: 10rem;
+  margin: 0 auto;
+  background-color: white;
+  outline: none;
+  border: solid;
+  border-width: 1.5px;
+}
+.sorterLabel {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 0.7rem;
+  color: rgb(255, 255, 255);
+}
+
+.sortForm {
+  border: 1px solid rgb(255, 255, 255);
+  width: 35%;
+  padding: 0;
+  margin: 2rem auto;
+  border-width: 10px;
+  border-radius: 20px;
+  border-style: double;
+  background-color: #cd2b2b;
+  color: white;
+  list-style: none;
+}
+
+.sortButton {
+  display: inline-block;
+  padding: 0.11em 0.6em;
+  border: 0.1em solid #000000;
+  margin: 1em 1em 1em 1em;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #000000;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  background-color: #cd2b2b;
+  text-align: center;
+  transition: all 0.15s;
+  font-size: 1rem;
+}
+
+.sortButton:hover {
   text-shadow: 0 0 2em rgba(255, 255, 255, 1);
   color: #ffffff;
   border-color: #ffffff;

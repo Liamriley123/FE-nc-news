@@ -21,15 +21,15 @@ class App extends Component {
     const { user } = this.state;
     return (
       <div className="App">
-        <Heading className="Heading" />
+        <Heading className="Heading" user={user} />
         <Nav user={user} logOut={this.logOut} />
         <Auth user={user} setUser={this.setUser}>
           <Router>
-            <Articles path="/articles" />
+            <Articles path="/articles" user={user} />
             <Topics path="/topics" />
             <ArticlesByTopic path="/topics/:topic" />
-            <Article path="/articles/:article_id" />
-            <Comments path="/articles/:article_id/comments" />
+            <Article path="/articles/:article_id" user={user} />
+            <Comments path="/articles/:article_id/comments" user={user} />
           </Router>
         </Auth>
         <Router>
