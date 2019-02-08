@@ -2,20 +2,29 @@ import React, { Component } from "react";
 import { getArticleById, formatDate, deleteData } from "./api";
 import { Link, navigate } from "@reach/router";
 import Voter from "./Voter";
+import ErrHandle from "./ErrHandle";
 
 class Article extends Component {
   state = {
-    article: []
+    article: [],
+    error: null
   };
 
-  async componentDidMount() {
-    const data = await getArticleById(this.props.article_id);
-    this.setState({ article: data });
+  componentDidMount() {
+    getArticleById(this.props.article_id)
+      .then(article => {
+        this.setState({ article });
+      })
+      .catch(err => {
+        this.setState({ error: err });
+      });
   }
 
   render() {
-    let { article } = this.state;
     let { user } = this.props;
+
+    const { article, error } = this.state;
+    if (error) return <ErrHandle resetState={this.resetState} error={error} />;
     return (
       <div>
         <h2 className="articleHeading">Articles</h2>
@@ -56,6 +65,12 @@ class Article extends Component {
     const articleid = this.state.article.article_id;
     deleteData(articleid).then(() => {
       navigate("/articles");
+    });
+  };
+  resetState = () => {
+    this.setState({
+      hasError: false,
+      err: ""
     });
   };
 }

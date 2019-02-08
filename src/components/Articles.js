@@ -3,7 +3,7 @@ import { getArticles, formatDate, getSortedArticles } from "./api";
 import { Link } from "@reach/router";
 import "./Articles.css";
 import AddArticle from "./AddArticle";
-// import ErrHandle from "./ErrHandle";
+import ErrHandle from "./ErrHandle";
 
 class Articles extends Component {
   state = {
@@ -24,8 +24,7 @@ class Articles extends Component {
 
   render() {
     const { hasErr, error } = this.state;
-    console.log("hello");
-    // if (hasErr) return <ErrHandle resetState={this.resetState} error={error} />;
+    if (hasErr) return <ErrHandle resetState={this.resetState} error={error} />;
 
     let { articles, showAdd } = this.state;
     const { user } = this.props;
@@ -84,8 +83,12 @@ class Articles extends Component {
           </button>
         </div>
         <div>
-          <button onClick={this.prevPage}>Prev Page</button>{" "}
-          <button onClick={this.nextPage}>Next Page</button>
+          <button onClick={this.prevPage} className="prevButton">
+            Prev Page
+          </button>{" "}
+          <button onClick={this.nextPage} className="nextButton">
+            Next Page
+          </button>
         </div>
 
         <div className="articleList">

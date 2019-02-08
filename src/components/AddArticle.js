@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import * as api from "./api";
 import "./AddArticle.css";
-// import ErrHandle from "./ErrHandle";
+import ErrHandle from "./ErrHandle";
 
 class AddArticle extends Component {
   state = {
@@ -17,7 +17,7 @@ class AddArticle extends Component {
   render() {
     const { user } = this.props;
     const { topics, title, body, topic, hasError, error } = this.state;
-    // if (hasError) return <ErrHandle error={error} />;
+    if (hasError) return <ErrHandle error={error} />;
 
     return (
       <div className="addArtHolder">

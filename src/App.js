@@ -60,6 +60,7 @@ class App extends Component {
           )}
           <Home path="/" user={user} />
           <Users path="/users" />
+          <ErrHandle default />
         </Router>
       </div>
     );
