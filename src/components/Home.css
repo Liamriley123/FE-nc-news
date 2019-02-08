@@ -96,6 +96,7 @@ label {
   .sumContainer {
     display: grid;
     grid-template: 1fr 1fr /1fr;
+    overflow-x: hidden;
   }
   .recent {
     width: 100%;
