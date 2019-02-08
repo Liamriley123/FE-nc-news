@@ -1,68 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# `LR-NC-News`
 
-## Available Scripts
+```
+My app is a news app responsive on both small and larger screen types. It was created using create-react-app and hosted on a netifly server. My app has features such as viewing all articles, topics and users as well as creating new topics and articles. You can view any individual articles and view the comments for these articles with each containing a voting system; so long as the person your logged in as didnt create the article/comment in which case you get the option of deleting instead. To log in you must go over to the users page, pick a user and use that username to log in, this will then give you acces to all features of the site rather than just the home and users page. My home page consists of recent and top articles which can are updated based on date and highest votes. The list of articles on the articles page can be sorted by: Date added, Votes, Author, Comments or title and in either ascending or descending order. You can also choose a limit per page and click between next and previous pages using the buttons. Finally the topics page can be used to choose a topic and view all articles under that topic as well as posting your own topic.
+```
 
-In the project directory, you can run:
+### `Running locally`
 
-### `npm start`
+To run the app locally you can use the `npm start` script in the terminal which will run the site on a local host server, to view this in the browser you must open (http://localhost:3000).
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### `Link to API and back end repository`
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Link to API: `https://nc-news-lr.herokuapp.com/api`
 
-### `npm test`
+Link to repository: `https://github.com/Liamriley123/NC-NEWS-LR`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Minimum versions`
 
-### `npm run build`
+The minimum versions needed to run my app are as follows:
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```"@reach/router": "^1.2.1",
+    "axios": "^0.18.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-scripts": "2.1.3",
+    "terser": "^3.14.1"
+```
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+### `Deployed`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Here is the link to my deployed version: `https://liams-nc-news.netlify.com`
 
-### `npm run eject`
+## Authors
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`Liam Riley` - Initial work - Github
+License
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Acknowledgments
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+`Northcoders`
