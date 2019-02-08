@@ -6,13 +6,14 @@ class Auth extends Component {
   state = {
     userText: "",
     userErr: null
-    //userLoading: false
   };
   render() {
     const { user, children } = this.props;
     const { userText } = this.state;
     if (user) {
-      return children;
+      console.log(children);
+
+      return <div>{children}</div>;
     } else {
       return (
         <div>
@@ -26,7 +27,6 @@ class Auth extends Component {
               className="validation"
             />
           </form>
-          {/* {this.state.userLoading && <p className="login">loading...</p>} */}
           {this.state.userErr && <h4 className="invalid">INVALID USERNAME</h4>}
         </div>
       );

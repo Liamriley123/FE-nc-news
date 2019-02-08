@@ -3,6 +3,7 @@ import { getArticles, formatDate, getSortedArticles } from "./api";
 import { Link } from "@reach/router";
 import "./Articles.css";
 import AddArticle from "./AddArticle";
+// import ErrHandle from "./ErrHandle";
 
 class Articles extends Component {
   state = {
@@ -11,7 +12,9 @@ class Articles extends Component {
     sort: "created_at",
     order: "asc",
     limit: "5",
-    page: 1
+    page: 1,
+    hasErr: false,
+    error: ""
   };
 
   async componentDidMount() {
@@ -20,6 +23,10 @@ class Articles extends Component {
   }
 
   render() {
+    const { hasErr, error } = this.state;
+    console.log("hello");
+    // if (hasErr) return <ErrHandle resetState={this.resetState} error={error} />;
+
     let { articles, showAdd } = this.state;
     const { user } = this.props;
     return (
@@ -31,7 +38,7 @@ class Articles extends Component {
         {showAdd && (
           <AddArticle fetchNewArticle={this.getNewArticle} user={user} />
         )}
-        <form className="sortForm">
+        <div className="sortForm">
           <p id="sortLabel" className="sorterLabel">
             Sort By:
           </p>
@@ -72,10 +79,10 @@ class Articles extends Component {
             <option value="25">25</option>
           </select>
           <br />
-          <button onClick={this.handleSubmit} className="sortButton">
+          <button className="sortButton" onClick={this.handleSubmit}>
             SORT
           </button>
-        </form>
+        </div>
         <div>
           <button onClick={this.prevPage}>Prev Page</button>{" "}
           <button onClick={this.nextPage}>Next Page</button>
@@ -144,7 +151,7 @@ class Articles extends Component {
 
   prevPage = () => {
     const { page } = this.state;
-    page && this.setState({ page: page + 1 });
+    page && this.setState({ page: page - 1 });
     this.handleSubmit();
   };
 
@@ -154,12 +161,21 @@ class Articles extends Component {
     this.handleSubmit();
   };
 
-  handleSubmit = async event => {
-    event.preventDefault();
+  handleSubmit = event => {
     const { sort, order, limit, page } = this.state;
-    const data = await getSortedArticles(sort, order, limit, page);
+    getSortedArticles(sort, order, limit, page)
+      .then(articles => {
+        this.setState({
+          articles
+        });
+      })
+      .catch(console.log);
+  };
+
+  resetState = () => {
     this.setState({
-      articles: data
+      hasError: false,
+      err: ""
     });
   };
 }

@@ -14,6 +14,10 @@ export const getSortedArticles = async (sort, order, limit, page) => {
   return data.articles;
 };
 
+export const auth = (user, route, auth) => {
+  return user ? route : auth;
+};
+
 export const deleteData = async (articleid, commentid) => {
   const url = commentid
     ? `${BASE_URL}/articles/${articleid}/comments/${commentid}`

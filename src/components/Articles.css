@@ -306,3 +306,18 @@ a {
   border-color: #ffffff;
   background-color: #8a1c1c;
 }
+
+@media (max-width: 600px) {
+  .sortForm {
+    border: 1px solid rgb(255, 255, 255);
+    width: 50%;
+    padding: 0;
+    margin: 2rem auto;
+    border-width: 10px;
+    border-radius: 20px;
+    border-style: double;
+    background-color: #cd2b2b;
+    color: white;
+    list-style: none;
+  }
+}

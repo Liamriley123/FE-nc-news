@@ -57,3 +57,21 @@
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
 }
+
+.userTitle {
+  font-size: 250%;
+  font-weight: 300;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  padding: 1rem 2rem;
+  margin: auto;
+}
+
+@media (max-width: 600px) {
+  .userTitle {
+    font-size: 100%;
+    font-weight: 300;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    padding: 1rem 1rem;
+    margin: auto;
+  }
+}

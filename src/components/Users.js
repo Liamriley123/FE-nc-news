@@ -24,7 +24,7 @@ class Users extends Component {
                 <div className="container">
                   <img src={avatar_url} alt="user" className="avatars" />
                   <div className="overlay">
-                    <h3 className="articleTitle">{username}</h3>
+                    <h3 className="userTitle">{username}</h3>
                     <p className="articleP">name: {name}</p>
                   </div>
                 </div>

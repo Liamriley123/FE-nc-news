@@ -91,3 +91,100 @@ label {
   font-size: 1.5rem;
   font-family: "Raleway", sans-serif;
 }
+
+@media (max-width: 600px) {
+  .sumContainer {
+    display: grid;
+    grid-template: 1fr 1fr /1fr;
+  }
+  .recent {
+    width: 100%;
+    margin: 2rem auto;
+    grid-row: 2/3;
+    visibility: hidden;
+  }
+
+  .recent > section {
+    border: 1px solid rgb(255, 255, 255);
+    width: 100%;
+    padding: 4rem;
+    margin: 3rem auto;
+    border-width: 10px;
+    border-radius: 20px;
+    border-style: double;
+    background-color: #cd2b2b;
+    color: white;
+    list-style: none;
+    visibility: hidden;
+  }
+
+  .top > section {
+    border: 1px solid rgb(255, 255, 255);
+    width: 50%;
+    padding: 4rem;
+    margin: 1rem auto;
+    border-width: 10px;
+    border-radius: 20px;
+    border-style: double;
+    background-color: #cd2b2b;
+    color: white;
+    list-style: none;
+  }
+
+  .top {
+    width: 100%;
+    margin: 1rem auto;
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  .homeTitle {
+    font-weight: 300;
+    font-size: 3rem;
+    color: #cd2b2b;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(182, 182, 182, 0.432);
+    padding: 3rem;
+    margin: 0;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    letter-spacing: 3px;
+    text-decoration: underline overline;
+    text-decoration-color: white;
+  }
+
+  .homeSlug {
+    font-weight: 300;
+    font-size: 2.1rem;
+    color: #cd2b2b;
+    border-bottom: 1px solid rgba(182, 182, 182, 0.432);
+    padding: 3rem;
+    margin: 0;
+    font-family: "Exo", sans-serif;
+    letter-spacing: 0px;
+  }
+  label {
+    font-weight: 300;
+    font-size: 2.5rem;
+    color: #cd2b2b;
+    border-bottom: 1px solid rgba(182, 182, 182, 0.432);
+    padding: 3rem;
+    margin: 0;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+    text-decoration: underline;
+  }
+
+  .articleSumP {
+    font-size: 1.5rem;
+    font-family: "Raleway", sans-serif;
+  }
+  .articleSumTitle {
+    font-size: 2rem;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .sumVotes {
+    font-size: 1.5rem;
+    font-family: "Raleway", sans-serif;
+  }
+}

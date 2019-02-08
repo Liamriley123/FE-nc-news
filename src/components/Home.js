@@ -2,11 +2,14 @@ import React, { Component } from "react";
 import ArticleSum from "./ArticleSum";
 import { getRecentArticles, getTopArticles } from "./api";
 import "./Home.css";
+// import ErrHandle from "./ErrHandle";
 
 class Home extends Component {
   state = {
     recentArticles: [],
-    topArticles: []
+    topArticles: [],
+    hasErr: false,
+    error: ""
   };
   async componentDidMount() {
     const recent = await getRecentArticles();
@@ -18,6 +21,8 @@ class Home extends Component {
 
   render() {
     const { user } = this.props;
+    const { hasErr, error } = this.state;
+    // if (hasErr) return <ErrHandle resetState={this.resetState} error={error} />;
     return (
       <div>
         <h2 className="homeTitle">Welcome to NC-News</h2>
@@ -42,6 +47,12 @@ class Home extends Component {
       </div>
     );
   }
+  resetState = () => {
+    this.setState({
+      hasError: false,
+      err: ""
+    });
+  };
 }
 
 export default Home;

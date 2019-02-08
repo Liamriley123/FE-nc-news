@@ -114,3 +114,45 @@
   border-color: #ffffff;
   background-color: #8a1c1c;
 }
+
+.selectTopic {
+  width: 20rem;
+  margin: 0 auto;
+  background-color: white;
+  outline: none;
+  border: solid;
+  border-width: 1.5px;
+}
+
+@media (max-width: 600px) {
+  .articleTitle {
+    font-size: 200%;
+    font-weight: 300;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    padding: 1rem 1rem;
+    margin: auto;
+  }
+
+  #body {
+    margin-bottom: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 0.5rem;
+    height: 10rem;
+    border: solid;
+    border-width: 1.5px;
+    width: 15rem;
+  }
+
+  .selectTopic {
+    width: 15rem;
+    margin: 0 auto;
+    background-color: white;
+    outline: none;
+    border: solid;
+    border-width: 1.5px;
+  }
+}

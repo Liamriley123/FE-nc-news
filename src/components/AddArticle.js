@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import * as api from "./api";
 import "./AddArticle.css";
+// import ErrHandle from "./ErrHandle";
 
 class AddArticle extends Component {
   state = {
@@ -9,11 +10,14 @@ class AddArticle extends Component {
     body: "",
     topic: "",
     username: this.props.user.username,
-    topics: []
+    topics: [],
+    hasError: false,
+    error: ""
   };
   render() {
     const { user } = this.props;
-    const { topics, title, body, topic } = this.state;
+    const { topics, title, body, topic, hasError, error } = this.state;
+    // if (hasError) return <ErrHandle error={error} />;
 
     return (
       <div className="addArtHolder">
@@ -44,7 +48,7 @@ class AddArticle extends Component {
             <br />
             <div className="categories">
               <select
-                className="select"
+                className="selectTopic"
                 id="topic"
                 value={topic}
                 onChange={this.handleChange}
@@ -107,14 +111,28 @@ class AddArticle extends Component {
           body: "",
           title: ""
         });
+      })
+      .catch(err => {
+        this.setState({
+          hasError: true,
+          error: err
+        });
       });
   };
   setTopicArray = () => {
-    api.getTopics().then(topics => {
-      this.setState({
-        topics
+    api
+      .getTopics()
+      .then(topics => {
+        this.setState({
+          topics
+        });
+      })
+      .catch(err => {
+        this.setState({
+          hasError: true,
+          error: err
+        });
       });
-    });
   };
 }
 
