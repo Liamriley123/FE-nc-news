@@ -23,7 +23,6 @@ export const deleteData = async (articleid, commentid) => {
     ? `${BASE_URL}/articles/${articleid}/comments/${commentid}`
     : `${BASE_URL}/articles/${articleid}`;
 
-  console.log(url);
 
   const { data } = await axios.delete(url);
   return data;
