@@ -56,5 +56,6 @@
   .slug {
     font-size: 2.7rem;
     font-family: "Raleway", sans-serif;
+    word-wrap: break-word;
   }
 }
