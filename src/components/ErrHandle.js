@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "@reach/router";
-import "./ErrHansle.css";
+import "./ErrHandle.css";
 
 const ErrHandle = ({ error }) => {
   return (

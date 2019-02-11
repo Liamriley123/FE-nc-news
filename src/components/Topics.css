@@ -51,3 +51,10 @@
   transition: 1s;
   text-decoration: underline overline;
 }
+
+@media (max-width: 600px) {
+  .slug {
+    font-size: 2.7rem;
+    font-family: "Raleway", sans-serif;
+  }
+}

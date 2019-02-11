@@ -28,7 +28,7 @@ class AddTopic extends Component {
               type="text"
               onChange={this.handleChange}
               value={slug}
-              placeholder="slug"
+              placeholder="description"
               required
             />
             <br />

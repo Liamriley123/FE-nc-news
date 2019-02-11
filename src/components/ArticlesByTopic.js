@@ -1,19 +1,23 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
 import { getArticlesByTopic, formatDate } from "./api";
+import ErrHandle from "./ErrHandle";
 
 class ArticlesByTopic extends Component {
   state = {
     articles: []
   };
 
-  async componentDidMount() {
-    const data = await getArticlesByTopic(this.props.topic);
-    this.setState({ articles: data });
+  componentDidMount() {
+    getArticlesByTopic(this.props.topic).then(articles => {
+      this.setState({ articles });
+    });
+    console.log(this.state);
   }
 
   render() {
     let { articles } = this.state;
+    if (articles.length === 0) return <ErrHandle />;
     return (
       <div>
         <h2 className="articleHeading">Articles</h2>

@@ -320,6 +320,19 @@ a {
     color: white;
     list-style: none;
   }
+
+  .articleList > li {
+    border: 1px solid rgb(255, 255, 255);
+    width: 50%;
+    padding: 2.7rem;
+    margin: 3rem auto;
+    border-width: 10px;
+    border-radius: 20px;
+    border-style: double;
+    background-color: #cd2b2b;
+    color: white;
+    list-style: none;
+  }
 }
 
 .prevButton {

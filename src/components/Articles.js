@@ -108,7 +108,7 @@ class Articles extends Component {
                   <h3 className="articleTitle">{title}</h3>
                   <p className="articlePTopic">Topic: {topic}</p>
                   <p className="articlePDate">Date: {formatDate(created_at)}</p>
-                  <p className="comments">{comment_count} comments</p>
+                  <p className="comments"> comments: {comment_count}</p>
                   <p className="votes">Votes: {votes}</p>
                   <Link
                     className="buttonViewArticle"

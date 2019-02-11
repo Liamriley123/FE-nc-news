@@ -1,19 +1,15 @@
 # `LR-NC-News`
 
-```
 My app is a news app responsive on both small and larger screen types. It was created using create-react-app and hosted on a netifly server. My app has features such as viewing all articles, topics and users as well as creating new topics and articles. You can view any individual articles and view the comments for these articles with each containing a voting system; so long as the person your logged in as didnt create the article/comment in which case you get the option of deleting instead. To log in you must go over to the users page, pick a user and use that username to log in, this will then give you acces to all features of the site rather than just the home and users page. My home page consists of recent and top articles which can are updated based on date and highest votes. The list of articles on the articles page can be sorted by: Date added, Votes, Author, Comments or title and in either ascending or descending order. You can also choose a limit per page and click between next and previous pages using the buttons. Finally the topics page can be used to choose a topic and view all articles under that topic as well as posting your own topic.
-```
 
 ### `list of valid usernames to log in`
 
-```
 -jessjelly
 -tickle122
 -grumpy19
 -happyamy2016
 -cooljmessy
 -weegembump
-```
 
 ### `installing dependancies`
 

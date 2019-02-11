@@ -3,7 +3,6 @@ import { Link } from "@reach/router";
 import { getTopics } from "./api";
 import "./Topics.css";
 import AddTopic from "./AddTopic";
-// import ErrHandle from "./ErrHandle";
 
 class Topics extends Component {
   state = {
@@ -19,8 +18,7 @@ class Topics extends Component {
   }
 
   render() {
-    let { topics, showAdd, hasErr, error } = this.state;
-    // if (hasErr) return <ErrHandle resetState={this.resetState} error={error} />;
+    let { topics, showAdd } = this.state;
     return (
       <div>
         <h2 className="topicHeading"> Topics</h2>
@@ -55,12 +53,6 @@ class Topics extends Component {
   showAdder = () => {
     this.setState({
       showAdd: true
-    });
-  };
-  resetState = () => {
-    this.setState({
-      hasError: false,
-      err: ""
     });
   };
 }
