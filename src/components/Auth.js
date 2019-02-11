@@ -11,8 +11,6 @@ class Auth extends Component {
     const { user, children } = this.props;
     const { userText } = this.state;
     if (user) {
-      console.log(children);
-
       return <div>{children}</div>;
     } else {
       return (

@@ -13,9 +13,9 @@ const ErrHandle = ({ error }) => {
       ) : (
         <h3>404</h3>
       )}
-      <button>
+      <button className="goHome">
         <Link className="link" to="/">
-          Go Back?
+          Go Home
         </Link>
       </button>
     </div>

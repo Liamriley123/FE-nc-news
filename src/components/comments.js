@@ -83,13 +83,10 @@ class Comments extends Component {
   };
 
   handleDeleteComment = commentid => {
-    console.log(this.props.article_id, commentid, "<-ID");
     const remainingComments = this.state.comments.filter(remainingComment => {
       return remainingComment.comment_id !== commentid;
     });
-    console.log(remainingComments);
     deleteData(this.props.article_id, commentid).then(data => {
-      console.log(data);
       this.setState({ comments: remainingComments });
     });
   };

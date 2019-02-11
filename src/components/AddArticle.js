@@ -84,6 +84,7 @@ class AddArticle extends Component {
       [id]: value
     });
   };
+
   handleSubmit = event => {
     event.preventDefault();
     const { title, username, body, topic } = this.state;

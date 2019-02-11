@@ -65,15 +65,23 @@ class App extends Component {
       </div>
     );
   }
+
+  componentDidMount = () => {
+    const user = sessionStorage.getItem("user");
+    if (user) this.setUser(JSON.parse(user));
+  };
+
   setUser = user => {
     this.setState({
       user
     });
+    sessionStorage.setItem("user", JSON.stringify(user));
   };
   logOut = () => {
     this.setState({
       user: null
     });
+    sessionStorage.setItem("user", null);
   };
 }
 

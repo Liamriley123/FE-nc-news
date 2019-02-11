@@ -10,3 +10,29 @@
   color: white;
   list-style: none;
 }
+
+.goHome {
+  grid-column: 2/3;
+  display: inline-block;
+  padding: 0.11em 0.6em;
+  border: 0.1em solid #000000;
+  margin: 1em 1em 1em 1em;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #000000;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  background-color: #cd2b2b;
+  text-align: center;
+  transition: all 0.15s;
+  text-decoration: none;
+}
+
+.goHome:hover {
+  text-shadow: 0 0 2em rgba(255, 255, 255, 1);
+  color: #ffffff;
+  border-color: #ffffff;
+  background-color: #8a1c1c;
+}

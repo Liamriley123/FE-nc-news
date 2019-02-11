@@ -5,19 +5,21 @@ import ErrHandle from "./ErrHandle";
 
 class ArticlesByTopic extends Component {
   state = {
-    articles: []
+    articles: [],
+    err: null
   };
 
   componentDidMount() {
-    getArticlesByTopic(this.props.topic).then(articles => {
-      this.setState({ articles });
-    });
-    console.log(this.state);
+    getArticlesByTopic(this.props.topic)
+      .then(articles => {
+        this.setState({ articles });
+      })
+      .catch(() => this.setState({ err: true }));
   }
 
   render() {
-    let { articles } = this.state;
-    if (articles.length === 0) return <ErrHandle />;
+    let { articles, err } = this.state;
+    if (err) return <ErrHandle />;
     return (
       <div>
         <h2 className="articleHeading">Articles</h2>

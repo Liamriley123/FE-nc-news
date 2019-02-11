@@ -164,15 +164,13 @@ class Articles extends Component {
     this.handleSubmit();
   };
 
-  handleSubmit = event => {
+  handleSubmit = () => {
     const { sort, order, limit, page } = this.state;
-    getSortedArticles(sort, order, limit, page)
-      .then(articles => {
-        this.setState({
-          articles
-        });
-      })
-      .catch(console.log);
+    getSortedArticles(sort, order, limit, page).then(articles => {
+      this.setState({
+        articles
+      });
+    });
   };
 
   resetState = () => {

@@ -11,7 +11,7 @@ const Heading = user => {
           </h4>
         )}
       </div>
-      <h1 className="title">NC-News</h1>
+      <h1 className="title"> NC-News</h1>
     </div>
   );
 };
