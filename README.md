@@ -4,12 +4,14 @@ My app is a news app responsive on both small and larger screen types. It was cr
 
 ### `list of valid usernames to log in`
 
+```
 -jessjelly
 -tickle122
 -grumpy19
 -happyamy2016
 -cooljmessy
 -weegembump
+```
 
 ### `installing dependancies`
 
