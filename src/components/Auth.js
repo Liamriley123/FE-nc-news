@@ -16,7 +16,10 @@ class Auth extends Component {
       return (
         <div>
           <h3 className="login">Please log in!</h3>
-          <h3 className="login">go over to users to find a valid username</h3>
+          <h3 className="login">
+            Head over to the users page on the navigation bar and hover over a
+            user to get their username and log in
+          </h3>
           <form onSubmit={this.handleSubmit}>
             <input
               value={userText}
